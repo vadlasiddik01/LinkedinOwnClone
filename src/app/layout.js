@@ -4,7 +4,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'LinkedIn Clone',
+  title: 'SiddikVadla-LinkedinOwnClone',
   description: 'A modern LinkedIn clone built with Next.js and Tailwind CSS',
 }
 
