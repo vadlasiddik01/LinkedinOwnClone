@@ -17,7 +17,8 @@ import {
   LinkIcon,
   FaceSmileIcon,
   PaperClipIcon,
-  PaperAirplaneIcon
+  PaperAirplaneIcon,
+  BookmarkIcon
 } from '@heroicons/react/24/outline'
 
 export default function FeedPage() {
