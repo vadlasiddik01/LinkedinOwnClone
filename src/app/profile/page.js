@@ -111,54 +111,54 @@ export default function ProfilePage() {
           <main className="flex-1 w-full max-w-3xl mx-auto">
             {/* Cover + Profile */}
             <div className="relative rounded-t-lg overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-              <div className="h-56 bg-gray-200 dark:bg-gray-700 relative">
+              <div className="h-40 sm:h-56 bg-gray-200 dark:bg-gray-700 relative">
                 <img src={profile.cover} alt="Cover" className="w-full h-full object-cover" />
-                <button className="absolute top-4 right-4 p-2 bg-white dark:bg-gray-900 rounded-full shadow hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700"><PencilIcon className="h-5 w-5 text-gray-600 dark:text-gray-200" /></button>
+                <button className="absolute top-2 right-2 sm:top-4 sm:right-4 p-2 bg-white dark:bg-gray-900 rounded-full shadow hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700"><PencilIcon className="h-5 w-5 text-gray-600 dark:text-gray-200" /></button>
               </div>
-              <div className="px-8 pb-6 pt-0">
-                <div className="relative flex items-end gap-6 -mt-20">
+              <div className="px-2 sm:px-8 pb-4 sm:pb-6 pt-0">
+                <div className="relative flex flex-col sm:flex-row items-center sm:items-end gap-2 sm:gap-6 -mt-16 sm:-mt-20">
                   <div className="relative">
                     {/* #OPENTOWORK badge as green ring and overlay text */}
                     <div className="relative">
-                      <div className="h-36 w-36 rounded-full bg-white dark:bg-gray-900 flex items-center justify-center shadow-lg">
-                        <div className="h-32 w-32 rounded-full border-4 border-[#27ae60] flex items-center justify-center overflow-hidden">
-                          <img src={profile.avatar} alt={profile.name} className="h-28 w-28 rounded-full object-cover" />
+                      <div className="h-20 w-20 sm:h-36 sm:w-36 rounded-full bg-white dark:bg-gray-900 flex items-center justify-center shadow-lg">
+                        <div className="h-16 w-16 sm:h-32 sm:w-32 rounded-full border-4 border-[#27ae60] flex items-center justify-center overflow-hidden">
+                          <img src={profile.avatar} alt={profile.name} className="h-14 w-14 sm:h-28 sm:w-28 rounded-full object-cover" />
                         </div>
-                        <span className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-[#27ae60] text-white text-xs font-bold px-3 py-0.5 rounded-full border-2 border-white shadow">#OPENTOWORK</span>
+                        <span className="absolute bottom-1 sm:bottom-2 left-1/2 -translate-x-1/2 bg-[#27ae60] text-white text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-0.5 rounded-full border-2 border-white shadow">#OPENTOWORK</span>
                       </div>
-                      <button className="absolute bottom-2 right-2 p-2 bg-white dark:bg-gray-900 rounded-full shadow border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700"><PencilIcon className="h-4 w-4 text-gray-600 dark:text-gray-200" /></button>
+                      <button className="absolute bottom-1 right-1 sm:bottom-2 sm:right-2 p-2 bg-white dark:bg-gray-900 rounded-full shadow border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700"><PencilIcon className="h-4 w-4 text-gray-600 dark:text-gray-200" /></button>
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2">
-                      <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 leading-tight">{profile.name}</h1>
-                      <span className="text-sm text-gray-500 dark:text-gray-300 font-semibold">{profile.pronouns}</span>
+                  <div className="flex-1 w-full text-center sm:text-left">
+                    <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-2">
+                      <h1 className="text-xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 leading-tight">{profile.name}</h1>
+                      <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-300 font-semibold">{profile.pronouns}</span>
                     </div>
-                    <div className="text-gray-700 dark:text-gray-200 mt-1 text-base font-medium leading-snug">{profile.headline}</div>
-                    <div className="flex flex-wrap gap-4 mt-2 items-center text-sm text-gray-600 dark:text-gray-300">
+                    <div className="text-gray-700 dark:text-gray-200 mt-1 text-sm sm:text-base font-medium leading-snug">{profile.headline}</div>
+                    <div className="flex flex-wrap gap-2 sm:gap-4 mt-2 items-center text-xs sm:text-sm text-gray-600 dark:text-gray-300 justify-center sm:justify-start">
                       <span>{profile.location}</span>
                       <a href="#" className="text-[#0a66c2] hover:underline">Contact info</a>
                     </div>
-                    <div className="flex flex-wrap gap-4 mt-2 items-center text-sm text-gray-600 dark:text-gray-300">
+                    <div className="flex flex-wrap gap-2 sm:gap-4 mt-2 items-center text-xs sm:text-sm text-gray-600 dark:text-gray-300 justify-center sm:justify-start">
                       <span className="font-semibold text-[#0a66c2]">{profile.connections}+ connections</span>
                     </div>
-                    <div className="flex gap-2 mt-4 flex-wrap">
-                      <button className="bg-[#0a66c2] text-white rounded-full px-5 py-2 font-semibold hover:bg-[#004182] text-sm">Open to</button>
-                      <button className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 rounded-full px-5 py-2 font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 text-sm">Add profile section</button>
-                      <button className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 rounded-full px-5 py-2 font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 text-sm">Enhance profile</button>
-                      <button className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 rounded-full px-5 py-2 font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 text-sm">Resources</button>
+                    <div className="flex gap-2 mt-4 flex-wrap justify-center sm:justify-start">
+                      <button className="bg-[#0a66c2] text-white rounded-full px-4 sm:px-5 py-2 font-semibold hover:bg-[#004182] text-xs sm:text-sm">Open to</button>
+                      <button className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 rounded-full px-4 sm:px-5 py-2 font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 text-xs sm:text-sm">Add profile section</button>
+                      <button className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 rounded-full px-4 sm:px-5 py-2 font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 text-xs sm:text-sm">Enhance profile</button>
+                      <button className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 rounded-full px-4 sm:px-5 py-2 font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 text-xs sm:text-sm">Resources</button>
                     </div>
                   </div>
                 </div>
                 {/* Company and Education */}
-                <div className="flex gap-6 mt-6">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 mt-4 sm:mt-6 items-center sm:items-start justify-center sm:justify-start">
                   <div className="flex items-center gap-2">
-                    <img src={profile.company.logo} alt={profile.company.name} className="h-6 w-6 rounded" />
-                    <span className="text-sm text-gray-700 dark:text-gray-200 font-medium">{profile.company.name}</span>
+                    <img src={profile.company.logo} alt={profile.company.name} className="h-5 w-5 sm:h-6 sm:w-6 rounded" />
+                    <span className="text-xs sm:text-sm text-gray-700 dark:text-gray-200 font-medium">{profile.company.name}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <img src={profile.education.logo} alt={profile.education.name} className="h-6 w-6 rounded" />
-                    <span className="text-sm text-gray-700 dark:text-gray-200 font-medium">{profile.education.name}</span>
+                    <img src={profile.education.logo} alt={profile.education.name} className="h-5 w-5 sm:h-6 sm:w-6 rounded" />
+                    <span className="text-xs sm:text-sm text-gray-700 dark:text-gray-200 font-medium">{profile.education.name}</span>
                   </div>
                 </div>
               </div>

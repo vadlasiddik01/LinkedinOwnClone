@@ -199,6 +199,10 @@ const useStore = create(
       setShowNotifications: (value) => set({ showNotifications: value }),
       setShowProfileMenu: (value) => set({ showProfileMenu: value }),
 
+      // Global Post Input Trigger
+      showGlobalPostInput: false,
+      setShowGlobalPostInput: (value) => set({ showGlobalPostInput: value }),
+
       // Feed State
       feedFilters: {
         sortBy: 'recent',

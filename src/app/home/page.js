@@ -1,6 +1,6 @@
 'use client'
 import MainLayout from '../../components/layout/MainLayout'
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import {
   UserIcon,
   EyeIcon,
@@ -18,10 +18,12 @@ import {
 } from '@heroicons/react/24/outline'
 import { useRouter } from 'next/navigation'
 import { ThemeContext } from '@/components/layout/MainLayout'
+import useStore from '@/store'
 
 export default function HomePage() {
   const router = useRouter()
   const { theme } = useContext(ThemeContext)
+  const { showGlobalPostInput, setShowGlobalPostInput } = useStore()
   // Mock data
   const profile = {
     name: 'Siddik Vadla',
@@ -100,6 +102,14 @@ export default function HomePage() {
   const [videoFile, setVideoFile] = useState(null)
   const [photoFile, setPhotoFile] = useState(null)
   const [articleContent, setArticleContent] = useState('')
+
+  // Listen for global post input trigger
+  useEffect(() => {
+    if (showGlobalPostInput) {
+      setShowPostInput(true)
+      setShowGlobalPostInput(false)
+    }
+  }, [showGlobalPostInput, setShowGlobalPostInput])
 
   const handlePost = () => {
     if (!newPostContent.trim()) return
